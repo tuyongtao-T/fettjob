@@ -2,14 +2,13 @@
  * @Author: tuyongtao1
  * @Date: 2023-07-06 10:38:07
  * @LastEditors: tuyongtao1
- * @LastEditTime: 2023-07-06 14:45:10
+ * @LastEditTime: 2023-07-06 15:01:31
  * @Description:
  */
 
 import { defineConfig } from "vuepress/config"
 
 export default defineConfig({
-  base: "/fettjob/",
   dest: 'dist',
   title: "fetjob前端",
   description: "前端,vue,javascript,",
