@@ -8,6 +8,10 @@
     "build": "vuepress build docs"
   },
   "devDependencies": {
+    "gulp": "^4.0.2",
     "vuepress": "^1.9.9"
+  },
+  "dependencies": {
+    "prompts": "^2.4.2"
   }
 }

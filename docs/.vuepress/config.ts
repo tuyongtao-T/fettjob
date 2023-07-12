@@ -1,8 +1,8 @@
 /*
  * @Author: tuyongtao1
- * @Date: 2023-07-06 10:38:07
+ * @Date: 2023-07-06 14:44:24
  * @LastEditors: tuyongtao1
- * @LastEditTime: 2023-07-07 10:05:18
+ * @LastEditTime: 2023-07-10 16:39:12
  * @Description:
  */
 
@@ -25,6 +25,7 @@ export default defineConfig({
             items: [
               { text: "JS高程", link: "/base/js/高级程序设计/" },
               { text: "阮一峰JS", link: "/base/js/阮一峰JS/" },
+              { text: "阮一峰ES", link: "/base/js/阮一峰ES/" },
             ],
           },
           {
@@ -37,13 +38,20 @@ export default defineConfig({
           { text: "css", link: "/base/css/" },
         ],
       },
-      { text: "前端工程化", link: "/cli/" },
+      {
+        text: "前端工程化",
+        items: [
+          { text: "gulp", link: "/cli/gulp/" },
+          { text: "代码格式化", link: "/cli/代码格式化/" },
+        ],
+      },
       { text: "google", link: "https://google.com" },
     ],
     // 侧边栏
     sidebar: "auto",
     lastUpdated: "Last Updated",
     smoothScroll: true,
+    sidebarDepth: 2,
   },
   markdown: {
     lineNumbers: true,
