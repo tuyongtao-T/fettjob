@@ -2,7 +2,7 @@
  * @Author: tuyongtao1
  * @Date: 2023-07-06 14:44:24
  * @LastEditors: tuyongtao1
- * @LastEditTime: 2023-07-10 16:39:12
+ * @LastEditTime: 2023-07-25 10:16:33
  * @Description:
  */
 
@@ -43,6 +43,7 @@ export default defineConfig({
         items: [
           { text: "gulp", link: "/cli/gulp/" },
           { text: "代码格式化", link: "/cli/代码格式化/" },
+          { text: "包管理工具", link: "/cli/包管理工具/" },
         ],
       },
       { text: "google", link: "https://google.com" },
