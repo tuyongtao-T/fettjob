@@ -318,3 +318,25 @@ nun webpack
 # bun remove webpack
  ```
 
+## 8. node管理工具
+
+### 1. n
+[官网](https://github.com/tj/n)
+
+### 2. nvm、nvmw、nvm-windows
+[参考](https://www.runoob.com/w3cnote/nvm-manager-node-versions.html)
+### 3. fnm
+[官网](https://github.com/Schniz/fnm)
+[介绍1](https://juejin.cn/post/7097206197324890125)
+[介绍2](https://zhuanlan.zhihu.com/p/587008009)
+
+### 4. volta
+[官网](https://volta.sh/)
+[介绍1](https://juejin.cn/post/7102627615172722702)
+[介绍2](https://cloud.tencent.com/developer/article/1979736)
+
+### 5. nvs
+[官网](https://github.com/jasongin/nvs)
+
+
+

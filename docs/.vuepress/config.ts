@@ -46,6 +46,10 @@ export default defineConfig({
           { text: "包管理工具", link: "/cli/包管理工具/" },
         ],
       },
+      {
+        text: "前端开发地图",
+        link: "https://mm.edrawsoft.cn/app/editor/H0UPXxyuHUIhm6uUp3uTuXNRQDkKRK5u?ivt=9ak287pK7NKXv1QN0TynXfd510kAFDLZ007?",
+      },
       { text: "google", link: "https://google.com" },
     ],
     // 侧边栏
