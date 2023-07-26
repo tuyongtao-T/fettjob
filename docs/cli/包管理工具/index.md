@@ -1,11 +1,4 @@
-<!--
- * @Author: tuyongtao1
- * @Date: 2023-07-10 09:45:14
- * @LastEditors: tuyongtao1
- * @LastEditTime: 2023-07-25 15:25:22
- * @Description: 
--->
-# npm 
+# npm 、yarn、pnpm
 
 ## 1. package.json
 ```json
@@ -208,3 +201,65 @@ npm install（在软件包目录下，无参数）：将依赖项安装到本地
 如果软件包有多个 bin 条目，且其中一个与名称字段的非选区部分匹配，则将使用该命令。
 如果这样做的结果不是只有一个选项（要么是因为没有 bin 条目，要么是因为没有一个与软件包名称相匹配的条目），那么 npm exec 会出错退出。
 要运行指定二进制文件以外的二进制文件，请指定一个或多个 --package 选项，这样 npm 就不会从第一个命令参数中推断出软件包。
+
+## 4. yarn
+
+初始化一个新项目
+```bash
+yarn init
+```
+添加依赖包
+```bash
+yarn add [package]
+yarn add [package]@[version]
+yarn add [package]@[tag]
+```
+将依赖项添加到不同依赖项类别中
+
+分别添加到 devDependencies、peerDependencies 和 optionalDependencies 类别中：
+```bash
+yarn add [package] --dev
+yarn add [package] --peer
+yarn add [package] --optional
+```
+升级依赖包
+```bash
+yarn upgrade [package]
+yarn upgrade [package]@[version]
+yarn upgrade [package]@[tag]
+```
+移除依赖包
+```
+yarn remove [package]
+```
+安装项目的全部依赖
+```bash
+yarn
+或者
+yarn install
+```
+
+## 5. pnpm 
+
+当使用 npm 时，如果你有 100 个项目，并且所有项目都有一个相同的依赖包，那么， 你在硬盘上就需要保存 100 份该相同依赖包的副本。然而，如果是使用 pnpm，依赖包将被 存放在一个统一的位置，因此：
+
+如果你对同一依赖包需要使用不同的版本，则仅有 版本之间不同的文件会被存储起来。例如，如果某个依赖包包含 100 个文件，其发布了一个新 版本，并且新版本中只有一个文件有修改，则 pnpm update 只需要添加一个 新文件到存储中，而不会因为一个文件的修改而保存依赖包的 所有文件。
+所有文件都保存在硬盘上的统一的位置。当安装软件包时， 其包含的所有文件都会硬链接自此位置，而不会占用 额外的硬盘空间。这让你可以在项目之间方便地共享相同版本的 依赖包。
+最终结果就是以项目和依赖包的比例来看，你节省了大量的硬盘空间， 并且安装速度也大大提高了！
+### 1.创建非扁平化节点模块目录
+当使用 npm 或 Yarn Classic 安装依赖包时，所有软件包都将被提升到 node_modules 的 根目录下。其结果是，源码可以访问 本不属于当前项目所设定的依赖包。
+### 2.兼容性
+以下列表列出了以往的 pnpm 版本和对应支持的 Node.js 版本。
+
+| Node.js |	pnpm 5 | pnpm 6 | pnpm 7 | pnpm 8
+| ---- |---- |---- |---- |---- |
+|Node.js 12|	✔️	|✔️	|❌|	❌|
+|Node.js 14|	✔️	|✔️	|✔️|	❌|
+|Node.js 16|	?️	|✔️	|✔️|	✔️|
+|Node.js 18|	?️	|✔️	|✔️|	✔️|
+
+## 6. 三者之间的差异
+ - [1. 为什么用pnpm](https://www.51cto.com/article/702067.html)
+ - [2. 为什么用pnpm](https://zhuanlan.zhihu.com/p/352437367)
+ - [3. 为什么用pnpm](https://juejin.cn/post/7047556067877716004)
+ - [4. 为什么用pnpm](https://www.pnpm.cn/blog/2020/05/27/flat-node-modules-is-not-the-only-way)
