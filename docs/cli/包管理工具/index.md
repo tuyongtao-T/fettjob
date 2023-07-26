@@ -263,3 +263,58 @@ yarn install
  - [2. 为什么用pnpm](https://zhuanlan.zhihu.com/p/352437367)
  - [3. 为什么用pnpm](https://juejin.cn/post/7047556067877716004)
  - [4. 为什么用pnpm](https://www.pnpm.cn/blog/2020/05/27/flat-node-modules-is-not-the-only-way)
+
+ ## 7. 工具库 ni
+ 
+ use the right package manager
+ ### 安装
+
+ ```bash
+npm i -g @antfu/ni
+ ```
+ ### 使用
+ ```bash
+ni
+# npm install
+# yarn install
+# pnpm install
+# bun install
+
+ni vite
+# npm i vite
+# yarn add vite
+# pnpm add vite
+# bun add vite
+
+ni @types/node -D
+# npm i @types/node -D
+# yarn add @types/node -D
+# pnpm add -D @types/node
+# bun add -d @types/node
+
+nr dev --port=3000
+# npm run dev -- --port=3000
+# yarn run dev --port=3000
+# pnpm run dev --port=3000
+# bun run dev --port=3000
+
+nlx vitest
+# npx vitest
+# yarn dlx vitest
+# pnpm dlx vitest
+# bunx vitest
+
+nu
+# (not available for bun)
+# npm upgrade
+# yarn upgrade (Yarn 1)
+# yarn up (Yarn Berry)
+# pnpm update
+
+nun webpack
+# npm uninstall webpack
+# yarn remove webpack
+# pnpm remove webpack
+# bun remove webpack
+ ```
+
